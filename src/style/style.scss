@@ -1,0 +1,237 @@
+@import './nullstyle.scss';
+@import './variables.scss';
+@import './navbar.scss';
+@import './footer.scss';
+@import './modal.scss';
+
+body, html {
+  background-color: #0b0214;
+}
+
+* {
+  font-family: 'DMSans-Regular';
+  color: #FFF;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 1184px;
+  border-radius: 0 20px 20px 0;
+
+  .bg-el-1 {
+    position: absolute;
+    top: 0;
+    height: 661px;
+    width: 100%;
+    z-index: 1;
+    img {
+      height: 661px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .bg {
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    height: 1123px;
+    z-index: 3;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+  }
+
+  .title-block {
+    max-width: 495px;
+    text-align: center;
+    margin-top: 123px;
+    position: relative;
+    z-index: 4;
+
+    .title-text {
+      font-family: 'Gilroy-400';
+      font-size: 24px;
+      line-height: 130%;
+      margin-top: 11px;
+    }
+
+    .title-btn-wrap {
+      display: flex;
+      gap: 24px;
+      margin-top: 37px;
+      justify-content: center;
+    }
+
+    .title-btn-1 {
+      background: url(../img/btn-color.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      
+    }
+
+    .title-btn-2 {
+      background: url(../img/btn.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.title {
+  font-family: 'FortyScript';
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 81px */
+  letter-spacing: 3.6px;
+  background: linear-gradient(132deg, #00FFF8 -2.84%, #142F5B 46.14%, #EA4E53 91.14%);
+  background-clip: text;
+  background-size: 300% 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 100%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.info-section {
+  padding: 104px 20px;
+}
+
+.info {
+  color: var(--Gray-6);
+  text-align: center;
+  font-family: 'Agency FB';
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 140%; /* 32.2px */
+  text-transform: uppercase;
+  max-width: 889px;
+  margin: 0 auto;
+}
+
+.btn, .btn span {
+  width: 248px;
+  height: 64px;
+  font-family: 'Agency FB';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%; /* 20.8px */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 789px) {
+  main {
+    height: 900px;
+    .bg {
+      top: 0;
+      height: 900px;
+    }
+    .title-block {
+      padding: 0 20px;
+      max-width: 423px;
+      margin-top: 140px;
+      .title {
+        font-size: 68px;
+      }
+      .title-text {
+        font-size: 20px;
+      }
+      .title-btn-wrap {
+        .btn {
+          height: 50px;
+        }
+        .title-btn-2 {
+          background-image: url(../img/btn-mobile.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          span {
+            background: var(--Gradient, linear-gradient(132deg, #142F5B 26.87%, #D8375B 91.14%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .info {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    height: 671px;
+    .bg {
+      top: 69px;
+      height: 600px;
+    }
+    .title-block {
+      padding: 0 20px;
+      max-width: 320px;
+      margin-top: 131px;
+      .title {
+        font-size: 45px;
+      }
+      .title-text {
+        font-size: 16px;
+      }
+      .title-btn-wrap {
+        .btn, .btn span {
+          height: 35px;
+          font-size: 12px;
+        }
+        .title-btn-2 {
+          background: url(../img/btn-mobile.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          span {
+            background: var(--Gradient, linear-gradient(132deg, #142F5B 26.87%, #D8375B 91.14%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .info {
+    font-size: 16px;
+  }
+}

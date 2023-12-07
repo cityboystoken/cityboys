@@ -1,0 +1,25 @@
+.nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  &__logo-wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 59.701px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

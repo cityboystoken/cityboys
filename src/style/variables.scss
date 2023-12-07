@@ -1,0 +1,37 @@
+:root {
+  --Grey-5: #C7C6CA;
+  --Gray-6: #F2F2F2;
+  --Secondary: #02121D;
+  --Pink: #D8375B;
+}
+
+
+@font-face {
+  font-family: 'FortyScript';
+  src: url(../../public/font/FortyScript.ttf), format(ttf);
+}
+
+@font-face {
+  font-family: 'Agency FB';
+  src: url(../../public/font/agencyfb_bold.ttf), format(ttf);
+}
+
+@font-face {
+  font-family: 'Gilroy-700';
+  src: url(../../public/font/Gilroy-Bold.woff), format(woff);
+}
+
+@font-face {
+  font-family: 'Gilroy-500';
+  src: url(../../public/font/Gilroy-Medium.woff), format(woff);
+}
+
+@font-face {
+  font-family: 'Gilroy-400';
+  src: url(../../public/font/Gilroy-Regular.woff), format(woff);
+}
+
+@font-face {
+  font-family: 'Gilroy-300';
+  src: url(../../public/font/Gilroy-Light.woff), format(woff);
+}
