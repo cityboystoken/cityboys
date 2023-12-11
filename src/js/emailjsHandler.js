@@ -11,17 +11,13 @@ const contactForm = document.querySelector('#contact-form');
 })();
 
 window.onload = function () {
-  console.log('SUCCESS! onload');
   contactForm.onsubmit = function(event) {
-    console.log('SUCCESS! onsubmit');
     event.preventDefault();
 
     sendForm(SERVICE_ID, TEMPLATE_ID, this).then(function() {
-        console.log('SUCCESS!');
         clearFormData();
         closeModal();
-      }, function(error) {
-        console.log('FAILED...', error);
+      }, function() {
         clearFormData();
         closeModal();
       });
